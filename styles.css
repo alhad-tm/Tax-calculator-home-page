@@ -5,13 +5,14 @@ body{
 }
 .container{
     width: 100%;
-    height: 100vh;
-    background-color: aqua;
+    min-height: 100vh;
+    /* background-color: aqua; */
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 4rem;
+
+    
   
 }
 
@@ -34,12 +35,22 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-left>span{
     font-size: 12px;
     line-height: 150%;
 }
-
+.nav-right>img{
+    width: 22px;
+    height: 22px;
+    margin-left: 0.3rem;
+}
 .header{
     width: 100%;
     height: 74px;
@@ -48,6 +59,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 0.4rem 0;
 }
 .header-contents{
     width: 100%;
@@ -56,11 +68,18 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
 
+}
+.logo{
+    width: 28px;
+    height: 32px;
+}
+.hamburger{
+    display: none;
 }
 .head-right{
     display: flex;
-   
     gap: 1rem;
     color: rgba(9, 21, 32, 1);
     font-size: 13px;
@@ -79,24 +98,29 @@ body{
 }
 .banner-container{
     width: 100%;
+    min-height: 85vh;
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 .banner-contents{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 1200px;
+    width: 60%;
+  
 }
 .banner-contents>:nth-child(1){
     color: white;
-    font-size: 50px;
+    font-size: 56px;
+ 
 }
 .banner-contents>:nth-child(2){
     color: white;
     font-size: 16px;
+    line-height: 25px;
 }
 
 .btn{
@@ -114,37 +138,48 @@ body{
 
 .banner-form{
     width: 360px;
-    height: 460px;
+    padding: 2rem 0;
     background-color: white;
     display: flex;
         flex-direction: column;
         align-items: center;
+       
 }
 
 .form{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: flex-start;
     justify-content: center;
+    width: 90%;
     
+}
+.form>label{
+    margin-top: 1rem;
 }
 .form-heading{
     font-family: Inter;
 font-weight: 600;
-font-size: 25px;
+font-size: 20px;
 line-height: 150%;
 letter-spacing: 0px;
 color: rgba(2, 39, 76, 1);
 }
 
 .form-input{
-    width: 80%;
-    width: 312;
-height: 40;
+    width: 90%;
+height: 32px;
 border-radius: 20px;
 border-width: 1px;
-border-color: blue;
+border-color: rgba(196, 196, 196, 1);
+
+}
+.form-agreement{
+    margin-top: 1rem;
+
+}
+.form-agreement>span{
+    font-size: 12px;
 
 }
 .terms{
@@ -166,6 +201,7 @@ border-color: blue;
     justify-content: center;
     padding: 1rem;
     font-size: 13px;
+    margin-top: 1.5rem;
 }
   
 
@@ -183,20 +219,7 @@ border-color: blue;
 
 }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* services */
 
 .service-section{
     width: 100%;
@@ -204,6 +227,7 @@ border-color: blue;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .service-container{
@@ -213,14 +237,16 @@ border-color: blue;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 5rem 1rem;
 }
 
 .service{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: red;
-    border: 1px solid green;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 30%;
+  
 }
 
 .icon-circle {
@@ -241,10 +267,95 @@ border-color: blue;
   .service-head{
     color: rgba(22, 54, 81, 1);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
   }
   .service-description{
     color: rgba(9, 21, 32, 1);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+  }
+
+  .hamburger-menu{
+    position: relative;
+  }
+  #menu-toggle{
+    display: none;
+  }
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #eee;
+  }
+  /* responsiveness */
+
+  @media (max-width: 768px) {
+    .navbar{
+        height: auto;
+    }
+    .nav-left{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+        align-items: flex-start;
+    }
+
+
+
+/* check */
+
+.hamburger {
+    display: block;
+  }
+
+  .head-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background:rgba(22, 54, 81, 1);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+    border-radius: 20px;
+   width: 160px;
+}
+
+  #menu-toggle:checked + .hamburger + .head-right {
+    display: flex;
+  }
+      
+      
+      
+
+
+
+
+    .banner-container{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+    .banner-contents{
+        width: 100%;
+    }
+    .banner-contents>:nth-child(1){
+        font-size: 47px;
+    }
+    .banner-form{
+        width: 100%;
+    }
+    .service-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service{
+        width: 80%;
+    }
   }

@@ -17,13 +17,22 @@
       <div class="navbar">
         <div class="nav-contents">
           <div class="nav-left">
-            <i class="fa-solid fa-square-phone" style="color: rgba(64, 165, 162, 1);"></i>
-            <span>087 245 0049/ 01 8137811  &nbsp; | </span> &nbsp;
-            <!-- <i class="fa-duotone fa-solid fa-square-phone" style="--fa-primary-color: #0fa4c2; --fa-secondary-color: #d9af07;"></i> -->
-            <i class="fa-solid fa-envelope" style="color:rgba(64, 165, 162, 1);"></i>
-            <span>contact@sample.ie &nbsp; |</span> &nbsp;
-            <i class="fa-solid fa-clock fa-flip-horizontal" style="color:rgba(64, 165, 162, 1);"></i>
-            <span>Mon-Thu: 8:00 am to 9:00 pm</span>
+            <div>
+                <i class="fa-solid fa-square-phone" style="color: rgba(64, 165, 162, 1);"></i>
+                <span>087 245 0049/ 01 8137811  &nbsp; | </span> &nbsp;
+            </div>
+    
+            <div>
+                <i class="fa-solid fa-envelope" style="color:rgba(64, 165, 162, 1);"></i>
+                <span>contact@sample.ie &nbsp; |</span> &nbsp;
+            </div>
+
+            <div>
+                <i class="fa-solid fa-clock fa-flip-horizontal" style="color:rgba(64, 165, 162, 1);"></i>
+                <span>Mon-Thu: 8:00 am to 9:00 pm</span>
+            </div>
+           
+        
           </div>
           <div class="nav-right">
             <img src="./images/fb.png" alt="">
@@ -37,17 +46,22 @@
       <div class="header">
         <div class="header-contents">
           <div class="head-left">
-           <img src="./images/logo.png" alt="">
+           <img class="logo" src="./images/logo.png" alt="">
           </div>
-          <div class="head-right">
-            <span>Home</span>
-            <span>Services</span>
-            <span>About Us</span>
-            <span>Order Company</span>
-            <span>Apply forTax Rebate</span>
-            <span>Blog</span>
-            <span>Contact</span>
+          <div class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <div class="head-right">
+              <span>Home</span>
+              <span>Services</span>
+              <span>About Us</span>
+              <span>Order Company</span>
+              <span>Apply for Tax Rebate</span>
+              <span>Blog</span>
+              <span>Contact</span>
+            </div>
           </div>
+         
         </div>
       </div>
       <!-- banner -->
@@ -84,14 +98,14 @@
 
                     <label for="">Name</label>
                     <input class="form-input" type="text">
-                    <label for="">Name</label>
+                    <label for="">Email ID</label>
                     <input class="form-input" type="text">
-                    <label for="">Name</label>
+                    <label for="">PPS Number</label>
                     <input class="form-input" type="text">
 
-                    <div>
+                    <div class="form-agreement">
                         <input type="checkbox">
-                        <span>I have read & agreed to the authorisation and the 
+                        <span >I have read & agreed to the authorisation and the 
                             <span class="terms">terms & conditions.</span></span>
                     </div>
 
